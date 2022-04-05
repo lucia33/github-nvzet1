@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.js",
     "start": "serve dist"
   },
   "keywords": [],
@@ -12,11 +12,12 @@
   "license": "MIT",
   "dependencies": {
     "@microsoft/fast-element": "^1.8.0",
-    "@microsoft/fast-foundation": "^2.40.0",
-    "lodash": "^4.17.21"
+    "@microsoft/fast-foundation": "^2.40.0"
   },
   "devDependencies": {
     "serve": "^12.0.0",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2"
   }
