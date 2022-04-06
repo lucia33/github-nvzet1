@@ -1,0 +1,12 @@
+{
+  "name": "demo-fast-foundation-extended",
+  "version": "1.0.0",
+  "main": "./main.js",
+  "engines": {
+    "node": ">= 14"
+  },
+  "dependencies": {
+    "@microsoft/fast-element": "^1.8.0",
+    "@microsoft/fast-foundation": "^2.40.0"
+  }
+}

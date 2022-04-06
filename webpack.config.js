@@ -1,4 +1,17 @@
 const path = require('path');
+const GeneratePackageJsonPlugin = require('generate-package-json-webpack-plugin');
+const basePackage = {
+  name: 'demo-fast-foundation-extended',
+  version: '1.0.0',
+  main: './main.js',
+  engines: {
+    node: '>= 14',
+  },
+  dependencies: {
+    '@microsoft/fast-element': '^1.8.0',
+    '@microsoft/fast-foundation': '^2.40.0',
+  },
+};
 
 module.exports = {
   mode: 'development',
@@ -13,7 +26,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.ts', 'js'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -23,4 +36,5 @@ module.exports = {
     },
   },
   devtool: 'inline-source-map',
+  plugins: [new GeneratePackageJsonPlugin(basePackage)],
 };

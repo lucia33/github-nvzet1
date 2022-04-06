@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "serve dist"
+    "clean:dist": "rm -r dist/",
+    "pack": "npm pack dist/"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@microsoft/fast-foundation": "^2.40.0"
   },
   "devDependencies": {
+    "generate-package-json-webpack-plugin": "^2.6.0",
     "serve": "^12.0.0",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.3",
